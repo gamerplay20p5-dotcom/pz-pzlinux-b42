@@ -1,0 +1,35 @@
+[h1]PZLinux — Build 42.21 / 0.3.0[/h1]
+
+Computadores, ATMs e correio conectam uma economia com banco, Mercado Local, Dark Web, contratos, encomendas, bolsa, apostas e hacking.
+
+[h2]Sandbox[/h2]
+[list]
+[*]55 opções com descrições em português brasileiro e inglês.
+[*]Ative ou desative os módulos individualmente, ou o mod inteiro.
+[*]Escolha dinheiro vanilla (Base.Money / Base.MoneyBundle) ou moedas PZLinux: cobre (1), prata (100) e ouro (10000).
+[*]Escolha aceitar apenas a moeda selecionada ou também a outra família. Saques e troco usam a selecionada.
+[*]Ajuste saldo inicial, limite por saque/depósito, preços, recompensas, apostas, procura e volatilidade.
+[*]Configure renovação e quantidade de ofertas da Dark Web e chance de roubo de entregas elegíveis.
+[*]Configure eletricidade, consumo extra de combustível, desgaste, reparos, conexão, e-mails e cartões nos corpos.
+[/list]
+
+[h2]Revisão B42.21[/h2]
+[list]
+[*]Referências críticas conferidas com a Umbrella local da 42.21.
+[*]Remoção e sincronização das caixas de contratos corrigidas.
+[*]Spawns que falham ou dependem de área ainda descarregada continuam pendentes para nova tentativa.
+[*]Cliente aguarda a confirmação do servidor para avançar spawns de veículos, alvos e caixas.
+[*]Veículos de encomenda recebem a chave criada pela API do próprio veículo.
+[*]Operações de moeda tratam falhas parciais de criação, retirada e troco.
+[*]Saldo numérico, histórico da bolsa, anúncios e entregas existentes são preservados.
+[/list]
+
+[h2]Instalação e compatibilidade[/h2]
+Mod ID: B42_PZLinux42
+Workshop ID: 3700371875
+Instale a mesma versão no servidor e nos clientes e reinicie após atualizar. Faça backup do save antes de atualizar.
+A venda de veículos do Mercado Local usa a integração existente com JeevesClaims. Sem ela, use o mercado de itens ou desative a venda de veículos no Sandbox. Multi Funções não substitui essa integração automaticamente.
+
+A revisão foi validada por testes automatizados e declarações da Umbrella. Teste real no motor B42.21 em SP, hospedado e dedicado ainda precisa ser realizado. Contratos, apostas, encomendas e hacking mantêm partes do protocolo bancário legado; esta atualização não transforma toda a economia em um sistema contra clientes modificados.
+
+Autor original: Raixxar.

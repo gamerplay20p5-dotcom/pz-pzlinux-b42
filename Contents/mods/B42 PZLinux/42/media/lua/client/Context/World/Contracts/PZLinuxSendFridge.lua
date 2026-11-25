@@ -1,0 +1,52 @@
+require "PZLinuxEconomy"
+
+function PZLinux_Contract_SendFridge_CreateCoroutine(self, contract, contractsCompanyCodes, contractsCompanyReward, typeText)
+    return coroutine.create(function()
+        local modData = getPlayer():getModData()
+        local globalVolume = getCore():getOptionSoundVolume() / 50
+        local playerName = generatePseudo(string.lower(getPlayer():getUsername()))
+        local sellerName = "<" .. contractsCompanyCodes[contract] .. "> "
+        modData.PZLinuxOnReward = contractsCompanyReward[contract]
+        modData.PZLinuxContractCompanyUp = "PZLinuxTrading" .. contractsCompanyCodes[contract]
+        local message = ""
+
+        local sleepSFX = 1
+        if modData.PZLinuxUISFX ==  0 then sleepSFX = 0.1 end
+
+        getSoundManager():PlayWorldSound("ircNotification", false, getPlayer():getSquare(), 0, 20, 1, true):setVolume(globalVolume)
+        message = sellerName .. PZLinuxText("UI_PZLinux_ContractNeedFridge", "We are looking for a fridge.")
+        self.loadingMessage:setName(message)
+        modData.PZLinuxContractInfoCount = 1
+
+        if not PZLinuxUtils_waitSeconds(200, 100, sleepSFX, self) then return end
+
+        typeText(self.typingMessage, PZLinuxText("UI_PZLinux_ContractAskReward", "What is the reward for this mission ?"), function()
+            message = message .. "\n" .. playerName .. PZLinuxText("UI_PZLinux_ContractAskReward", "What is the reward for this mission ?")
+            self.loadingMessage:setName(message)
+            self.typingMessage:setName("")
+        end)
+
+        if not PZLinuxUtils_waitSeconds(200, 100, sleepSFX, self) then return end
+
+        getSoundManager():PlayWorldSound("ircNotification", false, getPlayer():getSquare(), 0, 20, 1, true):setVolume(globalVolume)
+        message = message .. "\n" .. sellerName .. PZLinuxFormatCurrency(modData.PZLinuxOnReward) 
+        self.loadingMessage:setName(message)
+
+        if not PZLinuxUtils_waitSeconds(200, 100, sleepSFX, self) then return end
+
+        getSoundManager():PlayWorldSound("ircNotification", false, getPlayer():getSquare(), 0, 20, 1, true):setVolume(globalVolume)
+        message = message .. "\n" .. sellerName .. PZLinuxText("UI_PZLinux_Deal", "Deal ?")
+        self.loadingMessage:setName(message)
+
+        self.yesButton = ISButton:new(self.width * 0.35, self.height * 0.60, 80, 25, PZLinuxText("UI_PZLinux_Yes", "Yes"), self, self.onYesButton)
+        self.yesButton.contractId = contract
+        self.yesButton:initialise()
+        self.yesButton:instantiate()
+        self.topBar:addChild(self.yesButton)
+        
+        self.noButton = ISButton:new(self.width * 0.50, self.height * 0.60, 80, 25, PZLinuxText("UI_PZLinux_No", "No"), self, self.onMinimizeBack)
+        self.noButton:initialise()
+        self.noButton:instantiate()
+        self.topBar:addChild(self.noButton)
+    end)
+end

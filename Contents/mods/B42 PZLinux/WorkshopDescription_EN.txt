@@ -1,0 +1,35 @@
+[h1]PZLinux — Build 42.21 / 0.3.0[/h1]
+
+Computers, ATMs and mailboxes connect a bank, Local Market, Dark Web, contracts, supply requests, stocks, betting and hacking.
+
+[h2]Sandbox[/h2]
+[list]
+[*]55 settings with English and Brazilian Portuguese descriptions.
+[*]Enable or disable individual modules, or the entire mod.
+[*]Choose vanilla cash (Base.Money / Base.MoneyBundle) or PZLinux coins: copper (1), silver (100), gold (10000).
+[*]Accept only the selected currency or both families. Withdrawals and change use the selected family.
+[*]Configure starting balances, cash transaction caps, prices, rewards, betting, demand and stock volatility.
+[*]Configure Dark Web renewal, offer count and theft chance for eligible deliveries.
+[*]Configure electricity, extra fuel use, wear, repairs, connection duration, mail and corpse card drops.
+[/list]
+
+[h2]B42.21 review[/h2]
+[list]
+[*]Critical declarations checked against the local B42.21 Umbrella library.
+[*]Corrected contract cargo removal and multiplayer object replication.
+[*]Failed spawns and unloaded target squares remain pending for retry.
+[*]Clients wait for server confirmation before advancing vehicle, target and cargo spawns.
+[*]Requested vehicles use the native vehicle-key API.
+[*]Currency operations handle partial creation, removal and change failures.
+[*]Existing numeric balances, stock history, listings and paid deliveries are preserved.
+[/list]
+
+[h2]Installation and compatibility[/h2]
+Mod ID: B42_PZLinux42
+Workshop ID: 3700371875
+Install matching versions on clients and the server, then restart. Back up the save first.
+Local Market vehicle sales use the existing JeevesClaims integration. Without it, use item trading or disable vehicle sales in Sandbox. Multi Funcoes does not replace that integration automatically.
+
+Automated validation and Umbrella declaration checks passed. Real B42.21 single-player, hosted and dedicated playtests remain pending. Contracts, betting, requests and hacking retain parts of the legacy bank protocol; this is not a complete anti-cheat economy conversion.
+
+Original author: Raixxar.

@@ -1,0 +1,69 @@
+[h1]PZLinux 0.3.0 — B42.21 — 04/11/2026[/h1]
+[list]
+[*]Sandbox ampliado de 8 para 55 opções, com leitura centralizada, padrões compatíveis e limites numéricos.
+[*]Escolha entre Base.Money / Base.MoneyBundle e moedas de cobre, prata e ouro; aceitação opcional da outra moeda.
+[*]Definições de prata e ouro restauradas. Saldo numérico preservado ao trocar a moeda; nenhuma conversão automática dos itens já existentes.
+[*]Saques, depósitos, troco, conversões, textos e pacotes usam a moeda selecionada.
+[*]Adicionados controles por módulo, saldo inicial, limite de caixa, preços, recompensas, apostas, procura, volatilidade, catálogo e roubo de entregas.
+[*]Adicionados controles de eletricidade, desgaste, reparo, combustível extra, conexão, intervalos de e-mail e chance de cartões em corpos.
+[*]Corrigidos o nome da API de remoção de objetos e a replicação de caixas dos contratos em MP.
+[*]Spawns sem sucesso não consomem o estado pendente. Cliente deixa o avanço desses estados para o servidor, com novas tentativas limitadas.
+[*]Coordenadas de spawn conferidas com o destino salvo; tamanho da defesa determinado pelo Sandbox no servidor.
+[*]Encomendas de veículos usam createVehicleKey em vez de IDs de chave aleatórios.
+[*]Mortes causadas por outro sobrevivente não contam para o objetivo pessoal quando a API identifica o atacante.
+[*]Operações de moeda recompõem entradas em falhas parciais; reparo exige consumo bem-sucedido da sucata.
+[*]Textos ausentes, moedas, opções e tooltips traduzidos em EN/PTBR. IDs de mod e Workshop preservados.
+[*]48 regressões, sintaxe de 52 módulos, inicialização simulada SP/client/server, dependências, traduções e contratos críticos da Umbrella aprovados.
+[/list]
+Validação real no PZ 42.21 permanece pendente. A integração de venda de veículos continua sendo JeevesClaims. Fluxos bancários legados de contratos, apostas, encomendas e hacking foram preservados; não são integralmente autoritativos no servidor.
+
+[h2]Histórico anterior preservado[/h2]
+
+[h1]PZLinux B42.20.2 - Notas da Atualizacao[/h1]
+
+[h2]Estrutura e compatibilidade[/h2]
+[list]
+[*]Port completo da base mantida na B42.17/B42.19 para a B42.20.2.
+[*]mod.info da raiz, common e 42 alinhados no ID B42_PZLinux42.
+[*]Estrutura de media preparada para o carregador Linux/dedicado da Build atual.
+[*]Sintaxe Lua, JSON, traducoes, itens e veiculos validados contra a 42.20.2.
+[*]Referencias obsoletas de itens foram removidas ou substituidas por equivalentes atuais.
+[*]Formato de porcentagens das traducoes atualizado para a regra de %% da Build 42.20.2.
+[/list]
+
+[h2]Servidor e seguranca[/h2]
+[list]
+[*]Pacotes de inventario agora sao definidos pelo estado real do contrato no servidor.
+[*]Removido o comando generico que permitia solicitar pilhas arbitrarias de itens pelo cliente.
+[*]Spawns e remocoes de contratos validam distancia, estado e script esperado no servidor.
+[*]Impacto economico recebido do cliente agora valida empresa, chave e quantidade.
+[*]Snapshots do cliente nao sobrescrevem anuncios, carteira de trading, moedas bancarias ou dados ZLinux protegidos.
+[*]O fluxo bancario legado foi preservado onde ainda e necessario para contratos, apostas e hacking antigos.
+[/list]
+
+[h2]Mercado, correio e economia[/h2]
+[list]
+[*]Mercado Local e Dark Web mantidos com persistencia global controlada pelo servidor.
+[*]Venda de pacote suspeito nao credita mais o banco duas vezes.
+[*]Pedidos de veiculos foram conferidos contra os 31 scripts atuais usados pelo catalogo.
+[*]Economia isolada permanece baseada em Base.Money e Base.MoneyBundle.
+[*]Moeda de cobre legada ficou sem peso e sem copia de script conflitante.
+[/list]
+
+[h2]Desempenho e interface[/h2]
+[list]
+[*]Verificacao de conclusao de contratos limitada a quatro vezes por segundo.
+[*]Calculos de proximidade em movimento usam distancia ao quadrado.
+[*]Computadores e ATMs compartilham uma unica busca por gerador a cada minuto.
+[*]Tooltip de gerador virou um wrapper compativel com a implementacao vanilla atual.
+[*]Callback de debug antigo e inutilizado foi removido.
+[*]Versao exibida na interface atualizada para v0.2.0-b42.20.
+[/list]
+
+[h2]Validacao[/h2]
+[list]
+[*]50 arquivos Lua aprovados pelo compilador.
+[*]6 arquivos JSON validos.
+[*]372 chaves de UI em ingles e 372 em PTBR, sem diferencas.
+[*]Nenhum ID literal de item Base ausente na Build atual.
+[/list]

@@ -1,0 +1,62 @@
+[h1]PZLinux 0.3.0 — B42.21 — 2026-11-04[/h1]
+[list]
+[*]Expanded Sandbox from 8 to 55 settings, with centralized runtime reads, compatible defaults and numeric bounds.
+[*]Choose Base.Money / Base.MoneyBundle or copper, silver and gold coins; optionally accept the alternate family.
+[*]Restored silver/gold definitions. Switching currency preserves numeric bank balances and never deletes or automatically converts existing inventory items.
+[*]Withdrawals, deposits, change, conversions, labels and packages follow the selected currency.
+[*]Module switches and controls for starting balances, cash caps, prices, rewards, betting, demand, volatility, catalogs and eligible delivery theft.
+[*]Controls for electricity, wear, repairs, extra fuel, connection duration, mail intervals and corpse card drops.
+[*]Corrected native object removal and multiplayer cargo replication.
+[*]Failed spawns remain pending; clients wait for authoritative state changes and throttle retries.
+[*]World requests verify saved target coordinates; server Sandbox controls defense wave size.
+[*]Requested vehicles use createVehicleKey instead of random key IDs.
+[*]Other survivors' kills do not count toward personal objectives when the attacker is available.
+[*]Currency operations restore inputs on partial failures; repairs require successful scrap consumption.
+[*]Completed missing EN/PTBR labels and preserved mod/workshop identities.
+[*]48 regression tests, syntax for 52 modules, simulated SP/client/server initialization, dependencies, translations and critical Umbrella declarations passed.
+[/list]
+Real PZ 42.21 playtesting remains pending. Vehicle sales still use the JeevesClaims integration. Legacy contract, betting, request and hacking bank flows were preserved and are not fully server-authoritative.
+
+[h2]Previous history preserved[/h2]
+
+[h1]PZLinux B42.20.2 - Update Notes[/h1]
+
+[h2]Structure and compatibility[/h2]
+[list]
+[*]Ported the maintained B42.17/B42.19 base to Build 42.20.2.
+[*]Aligned root, common and 42 mod.info files to the preserved B42_PZLinux42 ID.
+[*]Prepared media folders for the current Linux/dedicated-server loader.
+[*]Validated Lua, JSON, translations, items and vehicles against Build 42.20.2.
+[*]Removed or replaced obsolete item references.
+[*]Updated literal translation percent signs to the Build 42.20.2 %% format.
+[/list]
+
+[h2]Server and security[/h2]
+[list]
+[*]Inventory packages are now derived from authoritative contract state.
+[*]Removed the generic client command that could request arbitrary item stacks.
+[*]Contract spawns and removals validate distance, state and expected scripts.
+[*]Economic-impact requests validate company, key and quantity.
+[*]Client snapshots cannot overwrite protected listings, portfolios, bank coins or ZLinux data.
+[*]Legacy bank writes remain available where old contracts, betting and hacking still require them.
+[/list]
+
+[h2]Economy and performance[/h2]
+[list]
+[*]Fixed duplicate bank credit from suspicious-package mailbox sales.
+[*]Validated all 31 requested vehicle scripts against the current game.
+[*]Kept the isolated economy on Base.Money and Base.MoneyBundle.
+[*]Removed the duplicate copper-coin script and made the legacy coin weightless.
+[*]Throttled contract completion checks to four times per second.
+[*]Replaced repeated square-root proximity checks with squared distance.
+[*]Combined computer and ATM generator searches into one check per minute.
+[*]Wrapped the current vanilla generator tooltip instead of replacing it.
+[/list]
+
+[h2]Validation[/h2]
+[list]
+[*]50 Lua files passed compiler validation.
+[*]6 JSON files passed parsing.
+[*]372 English UI keys and 372 PTBR UI keys with no mismatch.
+[*]No missing literal Base item IDs in the current build.
+[/list]

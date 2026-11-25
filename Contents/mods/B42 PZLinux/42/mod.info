@@ -1,0 +1,8 @@
+name=B42_PZLinux B42.21
+id=B42_PZLinux42
+poster=poster.png
+description=Economia digital configuravel para B42.21 com banco, dinheiro ou moedas, ATM, Mercado Local, Dark Web, contratos, bolsa, apostas e correio.
+tooltip=PZLinux
+author=Raixxar
+versionMin=42.21
+modversion=0.3.0

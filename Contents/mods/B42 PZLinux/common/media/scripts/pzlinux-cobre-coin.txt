@@ -1,0 +1,32 @@
+module Base
+{
+    item CobreCoin
+    {
+        DisplayCategory = Memento,
+        ItemType = base:normal,
+        Weight = 0.0,
+        Icon = Coin_Copper,
+        WorldStaticModel = CopperScrap,
+        Tags = base:hasmetal;base:fitswallet;base:smallestcopperscrap,
+    }
+
+    item SilverCoin
+    {
+        DisplayCategory = Memento,
+        ItemType = base:normal,
+        Weight = 0.0,
+        Icon = Coin_Copper,
+        WorldStaticModel = CopperScrap,
+        Tags = base:hasmetal;base:fitswallet,
+    }
+
+    item GoldCoin
+    {
+        DisplayCategory = Memento,
+        ItemType = base:normal,
+        Weight = 0.0,
+        Icon = Coin_Copper,
+        WorldStaticModel = CopperScrap,
+        Tags = base:hasmetal;base:fitswallet,
+    }
+}

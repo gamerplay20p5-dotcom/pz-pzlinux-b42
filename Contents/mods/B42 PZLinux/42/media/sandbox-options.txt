@@ -1,0 +1,507 @@
+VERSION = 1,
+
+option PZLinux.Enabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_Enabled,
+}
+
+option PZLinux.ATMEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_ATMEnabled,
+}
+
+option PZLinux.DarkWebEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_DarkWebEnabled,
+}
+
+option PZLinux.LocalMarketEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_LocalMarketEnabled,
+}
+
+option PZLinux.VehicleTradingEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_VehicleTradingEnabled,
+}
+
+option PZLinux.ContractsEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_ContractsEnabled,
+}
+
+option PZLinux.RequestsEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_RequestsEnabled,
+}
+
+option PZLinux.MailEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_MailEnabled,
+}
+
+option PZLinux.TradingEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_TradingEnabled,
+}
+
+option PZLinux.BettingEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_BettingEnabled,
+}
+
+option PZLinux.HackingEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_HackingEnabled,
+}
+
+option PZLinux.RepairEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_RepairEnabled,
+}
+
+option PZLinux.CurrencyConversionEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_CurrencyConversionEnabled,
+}
+
+option PZLinux.CurrencyMode
+{
+    type = enum,
+    default = 1,
+    numValues = 2,
+    valueTranslation = PZLinux_CurrencyMode,
+    page = PZLinux_Economy,
+    translation = PZLinux_CurrencyMode,
+}
+
+option PZLinux.AcceptAlternateCurrency
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Economy,
+    translation = PZLinux_AcceptAlternateCurrency,
+}
+
+option PZLinux.StartingBalanceMin
+{
+    type = integer,
+    default = 500,
+    min = 0,
+    max = 10000000,
+    page = PZLinux_Economy,
+    translation = PZLinux_StartingBalanceMin,
+}
+
+option PZLinux.StartingBalanceMax
+{
+    type = integer,
+    default = 3999,
+    min = 0,
+    max = 10000000,
+    page = PZLinux_Economy,
+    translation = PZLinux_StartingBalanceMax,
+}
+
+option PZLinux.MaxCashTransaction
+{
+    type = integer,
+    default = 100000,
+    min = 1,
+    max = 1000000,
+    page = PZLinux_Economy,
+    translation = PZLinux_MaxCashTransaction,
+}
+
+option PZLinux.ComputerRequiresPower
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_World,
+    translation = PZLinux_ComputerRequiresPower,
+}
+
+option PZLinux.ATMRequiresPower
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_World,
+    translation = PZLinux_ATMRequiresPower,
+}
+
+option PZLinux.ComputerWearMultiplier
+{
+    type = double,
+    default = 1,
+    min = 0,
+    max = 100,
+    page = PZLinux_World,
+    translation = PZLinux_ComputerWearMultiplier,
+}
+
+option PZLinux.RepairMultiplier
+{
+    type = double,
+    default = 1,
+    min = 0.1,
+    max = 100,
+    page = PZLinux_World,
+    translation = PZLinux_RepairMultiplier,
+}
+
+option PZLinux.RepairTime
+{
+    type = integer,
+    default = 430,
+    min = 1,
+    max = 10000,
+    page = PZLinux_World,
+    translation = PZLinux_RepairTime,
+}
+
+option PZLinux.RepairXP
+{
+    type = double,
+    default = 3,
+    min = 0,
+    max = 100,
+    page = PZLinux_World,
+    translation = PZLinux_RepairXP,
+}
+
+option PZLinux.PurchasePriceMultiplier
+{
+    type = double,
+    default = 1,
+    min = 0.1,
+    max = 100,
+    page = PZLinux_Settings,
+    translation = PZLinux_PurchasePriceMultiplier,
+}
+
+option PZLinux.SalePriceMultiplier
+{
+    type = double,
+    default = 1,
+    min = 0.1,
+    max = 100,
+    page = PZLinux_Settings,
+    translation = PZLinux_SalePriceMultiplier,
+}
+
+option PZLinux.ContractRewardMultiplier
+{
+    type = double,
+    default = 1,
+    min = 0,
+    max = 100,
+    page = PZLinux_World,
+    translation = PZLinux_ContractRewardMultiplier,
+}
+
+option PZLinux.ContractRefreshHours
+{
+    type = integer,
+    default = 168,
+    min = 1,
+    max = 8760,
+    page = PZLinux_World,
+    translation = PZLinux_ContractRefreshHours,
+}
+
+option PZLinux.ProtectWaveCount
+{
+    type = integer,
+    default = 30,
+    min = 1,
+    max = 80,
+    page = PZLinux_World,
+    translation = PZLinux_ProtectWaveCount,
+}
+
+option PZLinux.HackingRewardMultiplier
+{
+    type = double,
+    default = 1,
+    min = 0,
+    max = 100,
+    page = PZLinux_World,
+    translation = PZLinux_HackingRewardMultiplier,
+}
+
+option PZLinux.HackingMinElectricity
+{
+    type = integer,
+    default = 0,
+    min = 0,
+    max = 10,
+    page = PZLinux_World,
+    translation = PZLinux_HackingMinElectricity,
+}
+
+option PZLinux.BettingMaxStake
+{
+    type = integer,
+    default = 100000,
+    min = 1,
+    max = 10000000,
+    page = PZLinux_Economy,
+    translation = PZLinux_BettingMaxStake,
+}
+
+option PZLinux.BettingPayoutMultiplier
+{
+    type = double,
+    default = 1,
+    min = 0,
+    max = 100,
+    page = PZLinux_Economy,
+    translation = PZLinux_BettingPayoutMultiplier,
+}
+
+option PZLinux.MailMinHours
+{
+    type = integer,
+    default = 48,
+    min = 1,
+    max = 8760,
+    page = PZLinux_World,
+    translation = PZLinux_MailMinHours,
+}
+
+option PZLinux.MailMaxHours
+{
+    type = integer,
+    default = 720,
+    min = 1,
+    max = 8760,
+    page = PZLinux_World,
+    translation = PZLinux_MailMaxHours,
+}
+
+option PZLinux.DarkWebRefreshHours
+{
+    type = integer,
+    default = 24,
+    min = 1,
+    max = 8760,
+    page = PZLinux_World,
+    translation = PZLinux_DarkWebRefreshHours,
+}
+
+option PZLinux.DarkWebMaxOffers
+{
+    type = integer,
+    default = 2,
+    min = 1,
+    max = 20,
+    page = PZLinux_World,
+    translation = PZLinux_DarkWebMaxOffers,
+}
+
+option PZLinux.DarkWebDeliveryTheftChance
+{
+    type = double,
+    default = 10,
+    min = 0,
+    max = 100,
+    page = PZLinux_World,
+    translation = PZLinux_DarkWebDeliveryTheftChance,
+}
+
+option PZLinux.DarkWebSharedCatalogEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Settings,
+    translation = PZLinux_DarkWebSharedCatalogEnabled,
+}
+
+option PZLinux.TradingVolatilityMultiplier
+{
+    type = double,
+    default = 1,
+    min = 0,
+    max = 10,
+    page = PZLinux_Economy,
+    translation = PZLinux_TradingVolatilityMultiplier,
+}
+
+option PZLinux.ContractTradingImpactEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Settings,
+    translation = PZLinux_ContractTradingImpactEnabled,
+}
+
+option PZLinux.ContractTradingImpactMaxPercent
+{
+    type = double,
+    default = 1,
+    min = 0,
+    max = 100,
+    page = PZLinux_Settings,
+    translation = PZLinux_ContractTradingImpactMaxPercent,
+}
+
+option PZLinux.DemandEnabled
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Features,
+    translation = PZLinux_DemandEnabled,
+}
+
+option PZLinux.DemandMinimum
+{
+    type = double,
+    default = 0.75,
+    min = 0.1,
+    max = 10,
+    page = PZLinux_Economy,
+    translation = PZLinux_DemandMinimum,
+}
+
+option PZLinux.DemandMaximum
+{
+    type = double,
+    default = 2.5,
+    min = 0.1,
+    max = 10,
+    page = PZLinux_Economy,
+    translation = PZLinux_DemandMaximum,
+}
+
+option PZLinux.DemandBuyStep
+{
+    type = double,
+    default = 0.02,
+    min = 0,
+    max = 1,
+    page = PZLinux_Economy,
+    translation = PZLinux_DemandBuyStep,
+}
+
+option PZLinux.DemandSellStep
+{
+    type = double,
+    default = 0.01,
+    min = 0,
+    max = 1,
+    page = PZLinux_Economy,
+    translation = PZLinux_DemandSellStep,
+}
+
+option PZLinux.DemandDecayPerHour
+{
+    type = double,
+    default = 0.005,
+    min = 0,
+    max = 1,
+    page = PZLinux_Economy,
+    translation = PZLinux_DemandDecayPerHour,
+}
+
+option PZLinux.ForceItemZombieSpawn
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Settings,
+    translation = PZLinux_ForceItemZombieSpawn,
+}
+
+option PZLinux.ZombieCardDropChance
+{
+    type = double,
+    default = 0.5,
+    min = 0,
+    max = 100,
+    page = PZLinux_World,
+    translation = PZLinux_ZombieCardDropChance,
+}
+
+option PZLinux.EnableAutoHack
+{
+    type = boolean,
+    default = true,
+    page = PZLinux_Settings,
+    translation = PZLinux_EnableAutoHack,
+}
+
+option PZLinux.AutoHackAdminOnly
+{
+    type = boolean,
+    default = false,
+    page = PZLinux_Settings,
+    translation = PZLinux_AutoHackAdminOnly,
+}
+
+option PZLinux.ComputerFuelPerMinute
+{
+    type = double,
+    default = 0.0003,
+    min = 0,
+    max = 1,
+    page = PZLinux_World,
+    translation = PZLinux_ComputerFuelPerMinute,
+}
+
+option PZLinux.ATMFuelPerMinute
+{
+    type = double,
+    default = 0.0002,
+    min = 0,
+    max = 1,
+    page = PZLinux_World,
+    translation = PZLinux_ATMFuelPerMinute,
+}
+
+option PZLinux.ConnectionHours
+{
+    type = integer,
+    default = 24,
+    min = 1,
+    max = 8760,
+    page = PZLinux_World,
+    translation = PZLinux_ConnectionHours,
+}
